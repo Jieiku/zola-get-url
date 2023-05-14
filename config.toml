@@ -1,0 +1,28 @@
+# do NOT include a trailing slash on the base URL
+base_url = "/home/jieiku/.dev/zola-lang-url/public"
+
+title = "Testing"
+description = "Test For Zola"
+default_language = "en"
+compile_sass = false
+minify_html = false
+generate_feed = false
+output_dir = "public"
+build_search_index = false
+
+[languages.fr]
+title = "Essai"
+description = "Test pour Zola"
+generate_feed = false
+build_search_index = false
+
+[languages.fr.translations]
+flag = "Français"
+home = "Maison"
+
+[extra]
+flag.en = "English"
+flag.fr = "French"
+
+uglyurls = true
+

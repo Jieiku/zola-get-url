@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: /home/jieiku/.dev/zola-lang-url/public/sitemap.xml

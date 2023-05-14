@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{%- if lang != config.default_language %}{{ lang }}{% else %}{{ config.extra.language_code | default(value=lang) }}{% endif %}">
+<head>
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+</head>
+<body>
+  <h1><a href="{{ get_url(path="/", lang=config.default_language) }}{%- if config.extra.uglyurls %}index.html{%- endif %}">{{ config.default_language }}</a></h1>
+  {%- for language_name, language in config.languages -%}
+  <h1><a href="{{ get_url(path="/", lang=language_name) }}{%- if config.extra.uglyurls %}index.html{%- endif %}">{{ language_name }}</a></h1>
+  {%- endfor -%}
+
+  {%- block content %}
+  {%- endblock content %}
+</body>
+</html>
